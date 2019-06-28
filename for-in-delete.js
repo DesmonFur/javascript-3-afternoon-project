@@ -40,7 +40,10 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let oj = ''
+  for (let key in obj){
+    oj += obj[key]  }  
+    return oj
 }
 
 
@@ -53,7 +56,13 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj){
+  for (let key in obj){
+        if( obj[key] > 10){
+          obj[key] = 0
+        }
+  } return obj
+}
 
 
 
@@ -65,8 +74,11 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
+function double(obj){
+  for (let key in obj){
+      obj[key] += obj[key]
+    } return obj
+  } 
 
 
 ////////// PROBLEM 4 //////////
@@ -79,7 +91,14 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets (obj){
+  let sh = ''
+  for (let key in obj){
+   if(key.filter(el, i, arr){
+      return (el[0] === 'sh')
+   })
+  }
+}
 
 
 
