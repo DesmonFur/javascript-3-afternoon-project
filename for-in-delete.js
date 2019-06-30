@@ -91,15 +91,15 @@ function double(obj){
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-function secrets (obj){
-  let sh = ''
-  for (let key in obj){
-   if(key.filter(el, i, arr){
-      return (el[0] === 'sh')
-   })
+function secrets(obj){
+  let sh = "";
+  for(let key in obj){
+    if(key.startsWith("sh")){
+      sh += obj[key];
+    }
   }
+  return sh;
 }
-
 
 
 /* 
