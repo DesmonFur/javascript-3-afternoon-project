@@ -83,10 +83,15 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-function removeDuplicates(){
-  for(let i = 0; i < workplaceAccidents; i++){
-    
-  }
+function removeDuplicates(arr){
+  for(let i = 0; i < arr.length; i++){
+for( let w = i + 1; w < arr.length; w++){
+if(arr[i] === arr[w]){
+  arr.splice(w,1);
+  w--
+}
+}
+  } return arr
 }
 
 
@@ -116,8 +121,9 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+
+var grumpyActivity = cat.catFriends['0'].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -157,11 +163,21 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-
-
-
-////////// PROBLEM 5 //////////
+// function recordCleaner(){
+//   for (let index = 0; index < myCar.accidents.length; index++) {
+//     myCar.accidents.atFaultForAccident = false
+//   }
+// }
+  
+function recordCleaner(){
+  for (var i = 0; i < myCar.accidents.length; i++) {myCar.accidents[0].atFaultForAccident = false
+  }
+  for (var i = 0; i < myCar.accidents.length; i++) {myCar.accidents[1].atFaultForAccident = false
+  }
+  for (var i = 0; i < myCar.accidents.length; i++) {myCar.accidents[2].atFaultForAccident = false
+  }}
+  
+  /// PROBLEM 5 //////////
 
 // Do not edit the code below.
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
@@ -175,7 +191,17 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
         If the number is even, replace it with 'even'.
     4. Return the modified numsArr.
 */
+  
+const looper = (arr) => {
+  for (i = 0; i < arr.length; i++){
+    for(let ni = 0; ni < arr[i].length; ni++)
+    if (arr[i][ni] % 2 === 0){
+      arr[i][ni] = 'even'
+    } else if (arr[i][ni] % 2 === 1){
+      arr[i][ni] = 'odd'
+    }
+  } return arr;
+}
 
-//Code Here
 
 

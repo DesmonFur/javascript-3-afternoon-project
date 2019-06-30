@@ -108,11 +108,11 @@ function largeNumbers(first, second, third) {
 
 if(first > second && first > third) {
   return first
- } else if( second > third){
+ } else if( second > third && second > first){
   return second
  } else {
   return third 
- } 
+ }
 }
 
 
@@ -124,26 +124,28 @@ if(first > second && first > third) {
   Find the longest array and return that array.
 */
 
-function numberGroups(a,b,c){
-let arrays = [a,b,c]
-let longest = []
-arrays.forEach( (array, i) => {
-  if(array.length > longest.length){
-longest.push(array[i])
-}
-})
-return longest
+// function numberGroups(a,b,c){
+// let arrays = [a,b,c]
+// let longest = []
+// arrays.forEach( (array, i) => {
+//   if(array.length > longest.length){
+// longest.push(array[i])
+// }
+// })
+// return longest
+// }
+
+function numberGroups( {a, b, c} ) {
+  let arrays = [a, b, c]
+  let longest = [];
+  
+  arrays.forEach( (array, index ) => {
+    if (array.length > longest.length) {
+      longest.push(arrays[index]);
+    }
+  })
+  
+  return longest;
 }
 
-// function numberGroups( {a, b, c} ) {
-//   let arrays = [a, b, c]
-//   let longest = [];
-  
-//   arrays.forEach( (array, index ) => {
-//     if (array.length > longest.length) {
-//       longest.push(arrays[index]);
-//     }
-//   })
-  
-//   return longest;
-// }
+// confused
