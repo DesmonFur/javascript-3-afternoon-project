@@ -44,15 +44,28 @@ var employees = [
 // Do not edit the code above.
 
 /*
-  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
+  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater 
+  will loop over the array above and perform the following:
     1. If employee's first name is Theo, remove that employee because he just got fired.
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
 
-function employeeUpdater() {
-  
+
+//Code Here
+
+function employeeUpdater (){
+  for(var i=0; i<employees.length; i++){
+  if (employees[i].firstName === 'Theo'){
+    employees.splice(i,1)
+  } else {if (employees[i].firstName === 'Lorie'){
+    employees[i].department = 'HR'
+  }}
 }
+return employees;
+}
+
+
 
 
 
@@ -70,7 +83,11 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(){
+  for(let i = 0; i < workplaceAccidents; i++){
+    
+  }
+}
 
 
 

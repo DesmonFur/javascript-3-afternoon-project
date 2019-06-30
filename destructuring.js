@@ -92,18 +92,28 @@ function ingredients(obj){
   Find the smallest number of the three and return that number.
 */
 
+// function largeNumber (first,second,third){
+//   for(let key in first,second,third) {
+//     if(first > second && first > third){
+//       return first 
+//     } else if ( second > third){
+//       return second
+//     } else {
+//       return third
+//     }
+//   }
+// }
 
 function largeNumbers(first, second, third) {
-  
-  
 
 if(first > second && first > third) {
   return first
-} else if( second > first && second > third){
+ } else if( second > third){
   return second
-} else {
+ } else {
   return third 
-}}
+ } 
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -114,7 +124,26 @@ if(first > second && first > third) {
   Find the longest array and return that array.
 */
 
-function numberGroups(a,b,c) {
-
+function numberGroups(a,b,c){
+let arrays = [a,b,c]
+let longest = []
+arrays.forEach( (array, i) => {
+  if(array.length > longest.length){
+longest.push(array[i])
+}
+})
+return longest
 }
 
+// function numberGroups( {a, b, c} ) {
+//   let arrays = [a, b, c]
+//   let longest = [];
+  
+//   arrays.forEach( (array, index ) => {
+//     if (array.length > longest.length) {
+//       longest.push(arrays[index]);
+//     }
+//   })
+  
+//   return longest;
+// }
